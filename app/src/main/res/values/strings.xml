@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PathMind</string>
+    <string name="badge_status">ON-DEVICE SPATIAL ENGINE</string>
+    <string name="home_title">PATHMIND</string>
+    <string name="home_tagline">Your Phone\'s Personal Spatial Memory</string>
+    <string name="home_subtext">Remember places. Learn routes. Find your way back.</string>
+    
+    <string name="action_learn_route">LEARN NEW ROUTE</string>
+    <string name="action_learn_route_desc">Track movement and capture path</string>
+    <string name="action_my_routes">MY ROUTES</string>
+    <string name="action_my_routes_desc">View and retrace saved paths</string>
+    <string name="action_remember_place">REMEMBER A PLACE</string>
+    <string name="action_remember_place_desc">Mark and anchor current location</string>
+    
+    <string name="footer_text">100% On-Device • Zero Cloud Dependency</string>
+    <string name="msg_coming_soon">Coming in the next build</string>
+</resources>

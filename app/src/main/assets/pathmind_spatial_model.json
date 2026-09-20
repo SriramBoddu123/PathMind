@@ -1,0 +1,145 @@
+{
+  "model_name": "PathMind Spatial MLP",
+  "architecture": "18 -> 32 (ReLU) -> 16 (ReLU) -> 5 (Softmax)",
+  "features": [
+    "step_cadence_hz",
+    "accel_energy_variance",
+    "gyro_yaw_rate_rads",
+    "gyro_yaw_window_deg",
+    "movement_state_code",
+    "state_transition_jitter",
+    "hesitation_score",
+    "sensor_confidence_norm",
+    "expected_action_code",
+    "expected_turn_angle",
+    "segment_budget_steps",
+    "segment_learned_duration",
+    "is_memory_anchor",
+    "route_completion_ratio",
+    "step_progress_ratio",
+    "step_overshoot_delta",
+    "heading_disparity_deg",
+    "pace_disparity_ratio"
+  ],
+  "classes": [
+    "ON_ROUTE",
+    "DRIFT_WARNING",
+    "DEVIATION_CONFIRMED",
+    "RECOVERING",
+    "UNCERTAIN"
+  ],
+  "normalization": {
+    "mean": [
+      1.644405484199524,
+      1.6474592685699463,
+      0.1232353001832962,
+      35.420894622802734,
+      1.4921875,
+      0.3216205835342407,
+      0.33667686581611633,
+      0.7293241620063782,
+      1.3324999809265137,
+      -2.0531249046325684,
+      34.82437515258789,
+      17768.306640625,
+      0.13124999403953552,
+      0.5068241357803345,
+      0.6819899678230286,
+      1.7331249713897705,
+      79.0445556640625,
+      1.277309775352478
+    ],
+    "std": [
+      0.7414204478263855,
+      0.8430095314979553,
+      1.028002142906189,
+      99.03858947753906,
+      0.78813636302948,
+      0.24801741540431976,
+      0.24850066006183624,
+      0.22801260650157928,
+      0.6815029978752136,
+      50.24388885498047,
+      11.193451881408691,
+      5908.48486328125,
+      0.3376690447330475,
+      0.2426481693983078,
+      0.4067837595939636,
+      4.180927276611328,
+      71.73396301269531,
+      0.48523184657096863
+    ]
+  },
+  "metrics": {
+    "overall_test_accuracy": 0.9975,
+    "confusion_matrix": [
+      [
+        157,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        179,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        161,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        155,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        146
+      ]
+    ],
+    "class_metrics": [
+      {
+        "class": "ON_ROUTE",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      {
+        "class": "DRIFT_WARNING",
+        "precision": 0.9944444444444445,
+        "recall": 1.0,
+        "f1_score": 0.9972144846796658
+      },
+      {
+        "class": "DEVIATION_CONFIRMED",
+        "precision": 1.0,
+        "recall": 0.9938271604938271,
+        "f1_score": 0.9969040247678018
+      },
+      {
+        "class": "RECOVERING",
+        "precision": 0.9935897435897436,
+        "recall": 1.0,
+        "f1_score": 0.9967845659163987
+      },
+      {
+        "class": "UNCERTAIN",
+        "precision": 1.0,
+        "recall": 0.9931972789115646,
+        "f1_score": 0.9965870307167235
+      }
+    ]
+  }
+}

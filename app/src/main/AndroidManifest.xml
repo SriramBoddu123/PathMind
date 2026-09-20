@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Activity recognition permission for real hardware step detection on Android 10+ -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <!-- Audio recording permission for local on-device offline speech recognition -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Stage 9: Optional camera hardware declaration -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PathMind">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RouteLearningActivity"
+            android:exported="true"
+            android:label="Learn New Route" />
+
+        <activity
+            android:name=".MyRoutesActivity"
+            android:exported="true"
+            android:label="My Routes" />
+
+        <activity
+            android:name=".RouteDetailsActivity"
+            android:exported="true"
+            android:label="Route Details" />
+
+        <activity
+            android:name=".SensorDebugActivity"
+            android:exported="true"
+            android:label="Sensor Diagnostics" />
+
+        <activity
+            android:name=".RememberPlaceActivity"
+            android:exported="true"
+            android:label="Remember Place"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".MyMemoriesActivity"
+            android:exported="true"
+            android:label="My Memories" />
+
+        <activity
+            android:name=".MemoryDetailsActivity"
+            android:exported="true"
+            android:label="Memory Details" />
+
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="true"
+            android:label="Offline Navigation" />
+
+        <!-- Stage 9: FileProvider for local landmark camera capture -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

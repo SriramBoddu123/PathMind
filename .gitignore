@@ -1,0 +1,54 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated build output
+bin/
+gen/
+out/
+build/
+app/build/
+**/build/
+
+# Gradle files & cache
+.gradle/
+buildOutputCleanup/
+
+# Android Studio / IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NDK & Native build cache
+.externalNativeBuild/
+.cxx/
+ndkBuild/
+
+# Device & Personal configurations (Strict Privacy)
+local.properties
+captures/
+.navigation/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# PathMind Personal Runtime Data & Test Artifacts
+saved_memories.json
+saved_routes.json
+landmarks/
+*.log
+*.hprof
+/screen_*.png
