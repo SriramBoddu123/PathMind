@@ -293,7 +293,6 @@ adb install -r -d app/build/outputs/apk/debug/app-debug.apk
 # Launch PathMind
 adb shell am start -n com.example.pathmind/.MainActivity
 ```
-## 20. How to Install / Run the APK
 
 ### Download the APK
 
