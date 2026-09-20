@@ -293,6 +293,46 @@ adb install -r -d app/build/outputs/apk/debug/app-debug.apk
 # Launch PathMind
 adb shell am start -n com.example.pathmind/.MainActivity
 ```
+## 20. How to Install / Run the APK
+
+### Download the APK
+
+The latest working Android prototype is available in the GitHub Release:
+
+https://github.com/SriramBoddu123/PathMind/releases/tag/v1.0.0
+
+Open the release page and download the APK from the **Assets** section.
+
+### Install on Android
+
+1. Download the APK to an Android phone.
+2. Open the downloaded APK.
+3. If Android asks for permission to install from this source, allow it.
+4. Tap **Install**.
+5. Open **PathMind**.
+
+### Required Permissions
+
+PathMind may request:
+
+- **Microphone** — used for offline voice commands.
+- **Physical Activity** — used for movement and step detection.
+- **Camera** — optional and used only for saving a landmark photo.
+
+### Quick Demo
+
+1. Open PathMind.
+2. Go to a location such as a bike parking area.
+3. Say: **"Remember where I parked my bike."**
+4. Walk away from the location.
+5. Later say: **"Where did I park my bike?"**
+6. PathMind retrieves the saved spatial memory and starts navigation.
+
+### Offline Usage
+
+The core PathMind experience is designed to work without an internet connection.
+
+For the demo, the phone can be placed in **Airplane Mode** to demonstrate the offline functionality.
 
 ---
 
